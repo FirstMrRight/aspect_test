@@ -21,6 +21,7 @@ public class SysLogAspect {
     public Object around(ProceedingJoinPoint point) throws Throwable {
         long beginTime = System.currentTimeMillis();
         Object result = point.proceed();
+
         long time = System.currentTimeMillis() - beginTime;
         return result;
     }
